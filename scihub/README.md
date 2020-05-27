@@ -1,5 +1,4 @@
 scihub.py
-[![Python](https://img.shields.io/badge/Python-3%2B-blue.svg)](https://www.python.org)
 =========
 
 scihub.py is an unofficial API for sci-hub.cc. scihub.py can search for papers on Google Scholars and download papers from sci-hub.cc. It can be imported independently or used from the command-line.
@@ -66,6 +65,8 @@ result = sh.fetch('http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1648853
 
 ### download
 
+By Url:
+
 ```
 from scihub import SciHub
 
@@ -76,7 +77,19 @@ sh = SciHub()
 result = sh.download('http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1648853', path='paper.pdf')
 ```
 
+By DOI:
+
+```
+from scihub import SciHub
+
+sh = SciHub()
+
+result = sh.download('10.1016/j.compeleceng.2020.106640', path='paper2.pdf')
+```
+
 ### search
+
+!在中国大陆无法使用该功能
 
 ```
 from scihub import SciHub
